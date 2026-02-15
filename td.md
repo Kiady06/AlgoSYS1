@@ -46,13 +46,15 @@ swap
 **Pseudo-code**
 Debut
     Declarer temp : variable;
+    Declarer variable1 : variable;
+    Declarer variable2 : variable;
 
-    Lire A;
-    Lire B;
+    Lire variable1;
+    Lire variable2;
 
-    temp = A;
-    A = B;
-    B = temp;
+    temp = variable1;
+    variable1 = variable2;
+    variable2 = temp;
 Fin
 
 ## Exo 3
@@ -69,19 +71,26 @@ puissance
     - resultat de x^n
 
 *Conception*
-    - repetons l'operaion en prenant n comme compteur principale et en le decrementant jusqu'a 1
+    - a^n = a * a * a * .... * a n fois
 
 **Pseudo-code**
 Debut
-    Declarer resultat : entier;
+    Declarer resultat : reel positif;
+    Declarer x : reel positif;
+    Declarer n : entier positif;
 
     Lire x;
     Lire n;
-    resultat = 1;
 
-    
-        
-    FIN pour 
+    resultat = 1;
+    Si n = 0
+        resultat = 1;
+    SINON
+        Tant que n > 0
+            resultat = resultat * x;
+            n = n - 1;
+        Fin tant que
+    FIN SI
 Fin
 
 # Exo 4
@@ -101,23 +110,25 @@ Factorielle
 
 **Pseudo-code**
 Debut
-    Declarer solution : entier;
+    Declarer resultat : entier;
     Declarer x : entier;
 
-    Lire x; 
+    Lire x;
+    resultat = x;
     
-    Si x < 0
-        solution = NULL;
+    Si x < 0 Alors
+        resultat = NULL;
     SINON
-        si x = 0
-            solution = 1;
+        si x = 0 ou x = 1 Alors
+            resultat = 1;
     SINON
-        Si x = 1
-            solution = 1;
-    SINON
-        solution = x * Factorielle(x - 1);
+        TANT QUE x > 1
+            resultat = resultat * x
+            x = x - 1;
+        FIN TANT QUE
+    FIN SI
 
-    RETURN solution;
+    RETURN resultat;
 Fin
 
 # Exo 5 (a)
@@ -131,20 +142,24 @@ somme d'entier(formule)
 *Sortie* : somme de la suite de nombre;
 
 *Conception*
-    * Somme = (n(n+1)) div 2 avec n est le dernier chiffre;
+    * Somme = (n(n+1)) div 2 avec n est la borne superieur;
 
 **Pseudo-code**
 Debut
     Declarer resultat : entier;
+    Declarer borne supérieure: entier;
 
     Lire dernier_nombre;
+    resultat = 0;
 
-    resultat = dernier_nombre(dernier_nombre + 1) / 2; 
+    resultat = borne supérieure* (borne supérieure+ 1) / 2; 
 Fin
 
 # Exo 5 (b)
 
-somme d'entier(fomba gasy)
+somme d'entier(iteration )
+
+**Analyse du probleme**
 
 *Entree* : suite de nombres entiers par pas de 1, premier element est 1
 
@@ -155,14 +170,23 @@ somme d'entier(fomba gasy)
 
 **Pseudo-code**
 Debut
-    Declarer resultat;
+    Declarer resultat : entier;
+    Declarer borne_sup: entier;
 
-    Lire dernier_nombre;
+    Lire borne_sup;
     resultat = 0;
 
-    Pour i = 1 jusqu'a dernier_nombre par pas de 1
+    Pour i = 1 jusqu'a borne_sup par pas de 1 Faire
         resultat = resultat + i;
     FIN Pour
 
     RETURN resultat;
 Fin
+
+# Exo 6
+
+Divison euclidienne
+
+**Analyse du probleme**
+
+*Entree* : 
