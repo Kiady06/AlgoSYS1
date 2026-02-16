@@ -189,4 +189,37 @@ Divison euclidienne
 
 **Analyse du probleme**
 
-*Entree* : 
+*Entrees* :
+    - a : dividende (entier)
+    - b : diviseur (entier non nul)
+
+*sorties* :
+    - a : quotient
+    - r : reste
+
+*Conception* :
+    * Initialisation : r = a , q = 0
+    * tant que r > b, r = r-b et q++
+    * si r < b, stop
+
+**Pseudo-code**
+Debut
+    Declarer a : entier;
+    Declarer b  : entier;
+    Declarer q  : entier;
+    Declarer r  : entier;
+
+    Lire a;
+    Lire b;
+    
+    SI b = 0
+        Afficher "Erreur"
+        r = a;
+        q = 0;
+    SINON
+        TANT QUE r >= b
+            r = r - b;
+            q = q + 1;
+        FIN Tant que
+    FIN SI
+Fin
