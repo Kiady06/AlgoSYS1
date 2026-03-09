@@ -135,22 +135,22 @@ somme d'entier(formule)
 
 **Analyse du probleme**
 
-*Entree* : suite de nombres entiers par pas de 1, premier element est 1
+*Entree* : suite de nombres entiers consecutif
 
 *Sortie* : somme de la suite de nombre
 
 *Conception*
-    * Somme = (n(n+1)) div 2 avec n est la borne superieur
+    * Somme = (n(n+1)) div 2 avec n est le dernier element
 
 **Pseudo-code**
 Debut
     Declarer resultat : entier
-    Declarer borne supérieure: entier
+    Declarer dernier_element: entier
 
-    Lire dernier_nombre
+    Lire dernier_element
     resultat = 0
 
-    resultat = borne supérieure * (borne supérieure + 1) / 2
+    resultat = dernier_element * (dernier_element + 1) / 2
 Fin
 
 # Exo 5 (b)
@@ -159,23 +159,23 @@ somme d'entier(iteration )
 
 **Analyse du probleme**
 
-*Entree* : suite de nombres entiers par pas de 1, premier element est 1
+*Entree* : plus grand element entier n
 
 *Sortie* : somme de la suite de nombre
 
 *Conception*
-    * resultat = 0
-    * faire une boucle pour i de 1 jusqu'a borne sup et l'additionner a notre resultat a chaque fois
+    * initialiser resultat = 0
+    * faire une boucle pour i de 1 jusqu'a dernier element et l'additionner(i) a notre resultat a chaque fois
 
 **Pseudo-code**
 Debut
     Declarer resultat : entier
-    Declarer borne_sup: entier
+    Declarer dernier_element: entier
 
-    Lire borne_sup
+    Lire dernier_element
     resultat = 0
 
-    Pour i = 1 jusqu'a borne_sup par pas de 1 Faire
+    Pour i = 1 jusqu'a dernier_element par pas de 1 Faire
         resultat = resultat + i
     FIN Pour
 

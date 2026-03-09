@@ -1,21 +1,21 @@
 const promptSync = require('prompt-sync');
 const prompt = promptSync();
 
-let inputA = prompt("Entrez le dividende a : ");
-let inputB = prompt("Entrez le diviseur b : ");
+let inputA = prompt("Entrez le dividende A : ");
+let inputB = prompt("Entrez le diviseur B : ");
 
-const b = Number(inputB);
-const a = Number(inputA);
+const B = Number(inputB);
+const A = Number(inputA);
 let q;
 let r;
 
 if (b === 0) {
     console.log('error');
 } else {
-    r = a;
+    r = A;
     q = 0;
-    while (r >= b) {
-        r -= b;
+    while (r >= B) {
+        r -= B;
         q++;
     }
 
