@@ -2,6 +2,7 @@ const prompt = require(`prompt-sync`)();
 
 let input = prompt(`Valeur borne sup : `);
 const dernierElement = Number(input);
+let result = 0;
 
 let affichage = ``;
 
