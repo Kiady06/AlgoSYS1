@@ -198,7 +198,8 @@ Divison euclidienne
 
 *Conception* :
     * Initialisation : r = a , q = 0
-    * tant que r > b, r = r-b et q++
+    * si b = 0 erreur
+    * tant que r >= b,on fait r = r-b et q++
     * si r < b, stop
 
 **Pseudo-code**
@@ -211,7 +212,7 @@ Debut
     Lire a
     Lire b
     
-    SI b = 0
+    SI b === 0 Alors
         Afficher "Erreur"
     SINON
         r = a
