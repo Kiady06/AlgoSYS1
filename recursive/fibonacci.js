@@ -7,13 +7,6 @@ function fibonnaci(n) {
 function fibonnaciOpti(n, cache) {
   cache = cache || { 1: 1, 2: 2 };
 
-  if (typeof cache == `undefined`) {
-    cache = {
-      1: 1,
-      2: 2,
-    };
-  }
-
   if (cache[n]) return cache[n];
 
   return (cache[n] = fibonnaciOpti(n - 1, cache) + fibonnaciOpti(n - 2, cache));

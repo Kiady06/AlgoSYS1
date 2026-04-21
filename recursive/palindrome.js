@@ -6,4 +6,4 @@ function palindrome(mot) {
     return false;
 }
 
-console.log(palindrome("eluparcettecrapule"));
+console.log(palindrome("eE"));
