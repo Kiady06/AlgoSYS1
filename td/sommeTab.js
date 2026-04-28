@@ -9,9 +9,9 @@
 const sumTab = (tab, index = 0) => {
 
     if (index >= tab.length) {return 0};
-     if (tab.length ==  1) {return tab[0];}
+    if (tab.length ==  1) {return tab[0];}
 
-     return tab[index] + sumTab(tab, index+1);
+    return tab[index] + sumTab(tab, index+1);
 };
 
 console.log(sumTab([1, 2, 3, 4]));

@@ -13,9 +13,9 @@
 function simplifyChars(str) {  
   return str
     .toLowerCase()
-    // .replace(/ç/g, "c")
-    // .replace(/œ/g, "oe")
-    // .replace(/æ/g, "ae")
+    .replace(/ç/g, "c")
+    .replace(/œ/g, "oe")
+    .replace(/æ/g, "ae")
     .normalize("NFD")
     .replace(/[^a-z0-9]/g, ""); 
 }
@@ -23,10 +23,10 @@ function simplifyChars(str) {
 const estPalindrome= (str)  => {
     const newStr = simplifyChars(str);
 
-    if (newStr.length === 1) {return true;}
+    if (newStr.length <= 1) {return true;}
 
     if ( newStr[0] === newStr[newStr.length - 1])
-        return estPalindrome(newStr.slice(1, newStr.length - 1));
+        return estPalindrome(newStr.substring(1, newStr.length - 1));
 
     return false;
 };

@@ -5,9 +5,10 @@ function search(tree, value) {
            if (search(element, value)) {
                 return true; 
             }
-        } else  if (element === value)
+        } else  if (element === value) {
                 return true
         }
+    }
     return false;
 }
 
